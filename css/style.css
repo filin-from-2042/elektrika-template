@@ -1,0 +1,142 @@
+
+
+.slider{
+	background-color:#202227;
+}
+.short-info
+{
+	background:linear-gradient(to right, #16171a, #2d2f34 30%, #16171a 100%); 
+}
+.about {
+	background-color: #16171a;
+}
+.prev-block{
+	background-color: #26282e;
+}
+footer {
+	background-color: #1a1b1e;
+}
+header .navbar{
+	background:linear-gradient(to right, #16171a, #2d2f34 30%, #16171a 100%); 
+	min-height:100px;
+	border:none;
+	margin:0;
+	border-radius:0;
+}
+header .navbar .container{
+	padding: 19px 10px;
+}
+header .nav.navbar-nav  li{
+	padding:5px 10px;
+}
+header .nav.navbar-nav ul.dropdown-menu {
+	background-color:#313338;
+	border-radius:5px;
+}
+header ul.dropdown-menu  a{
+	color:#fff;
+}
+header .dropdown-menu li:nth-child(odd){
+	background-color:#4f5155;
+}
+header .nav.navbar-nav .dropdown-menu > li {
+	padding:0;
+}
+header .nav.navbar-nav .dropdown-menu > li>a {
+	padding:8px 35px;
+}
+header .navbar-right .dropdown-menu{
+	right: -35px;
+	top: 110%;
+}
+header .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a{
+	font-weight:bold;
+}
+header .dropdown-menu > li#arrow-sub {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    left: 69px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -16px;
+}
+
+
+#myCarousel .slider-wrap{
+    margin: 10px auto;
+	padding:0;
+}
+
+#myCarousel .carousel-inner{
+    border-radius:20px;
+}
+ 
+#myCarousel .carousel-inner > .item{
+	max-height:500px;
+}
+ 
+ .carousel-control.left,
+ .carousel-control.right{
+	background:none;
+ }
+ 
+ .short-info>.container{
+	padding:20px 0;
+ }
+
+ .short-info .navbar{	
+	background:linear-gradient(to bottom, #ced2d8, #c9cdd4 50%, #bbc0c8 100%);
+ } 
+ .short-info .navbar>.container{
+	padding:0;
+ }
+ 
+ .short-info .nav li {
+	text-align:center;
+ }
+ 
+ .short-info .nav li > a{
+	text-transform:uppercase;
+	font-size: 16px;
+    font-weight: bold;
+	padding:10px 25px;
+	color:#fff;
+ }
+ .short-info .nav li.active a,
+ .short-info .nav li.active{
+	background:linear-gradient(to bottom, #33363e, #2a2c33 50%, #222429 100%);
+	color:#fff;
+ }
+ .short-info .nav  .sub-text{
+	font-style:italic;
+	text-transform:none;
+	font-size: 12px;
+	color:#6f7380;
+ }
+ 
+ 
+@media (min-width: 992px) and (max-width: 1200px){ 
+
+
+	.nav.navbar-nav  li{
+		padding:5px 0;
+	}
+
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991px){ 
+
+	.navbar-header{
+		display: block;
+	    float: none;
+	    text-align: center;
+	}
+
+	#logo{
+		float:none;
+	}
+
+}
