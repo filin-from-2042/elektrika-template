@@ -84,8 +84,12 @@ header .dropdown-menu > li#arrow-sub {
 	padding:20px 0;
  }
 
- .short-info .navbar{	
+ .short-info .navbar.navbar-default{
+ 	overflow: hidden;
+ }
+  .short-info .navbar{	
 	background:linear-gradient(to bottom, #ced2d8, #c9cdd4 50%, #bbc0c8 100%);
+	border: none;
  } 
  .short-info .navbar>.container{
 	padding:0;
@@ -114,6 +118,8 @@ header .dropdown-menu > li#arrow-sub {
 	color:#6f7380;
  }
  
+
+
  
 @media (min-width: 992px) and (max-width: 1200px){ 
 
