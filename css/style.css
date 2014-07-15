@@ -1,11 +1,15 @@
 
-
-.slider{
+/***************************Main*****************************************/
+.slider
+{
 	background-color:#202227;
 }
 .short-info
 {
 	background:linear-gradient(to right, #16171a, #2d2f34 30%, #16171a 100%); 
+}
+.tabs-images{
+	background:linear-gradient(to right, #2b3139, #475160 30%, #2b313a 100%); 	
 }
 .about {
 	background-color: #16171a;
@@ -16,6 +20,8 @@
 footer {
 	background-color: #1a1b1e;
 }
+
+/***************************header**************************************/
 header .navbar{
 	background:linear-gradient(to right, #16171a, #2d2f34 30%, #16171a 100%); 
 	min-height:100px;
@@ -60,27 +66,29 @@ header .dropdown-menu > li#arrow-sub {
     position: absolute;
     top: -16px;
 }
-
-#myCarousel {
+/****************************slider***************************/
+.slider #myCarousel {
 	padding:10px 0;
 }
-#myCarousel .slider-wrap{
+.slider #myCarousel .slider-wrap{
     margin: 10px auto;
 	padding:0;
 }
 
-#myCarousel .carousel-inner{
+.slider #myCarousel .carousel-inner{
     border-radius:20px;
 }
  
-#myCarousel .carousel-inner > .item{
+.slider #myCarousel .carousel-inner > .item{
 	max-height:500px;
 }
  
- .carousel-control.left,
- .carousel-control.right{
+.slider .carousel-control.left,
+.slider .carousel-control.right{
 	background:none;
  }
+ 
+ /*************************short-info***********************/
  
  .short-info>.container{
 	padding:20px 0;
@@ -125,7 +133,7 @@ header .dropdown-menu > li#arrow-sub {
  }
  
  .short-info  .tab-content>.tab-pane img {
-	width:100%;
+	/* width:100%; */
  }
  .short-info  .buttons-full-info{
 	margin-top:20px;
@@ -178,6 +186,53 @@ header .dropdown-menu > li#arrow-sub {
     background-image: url("../images/button-facebook.png");
 } 
  
+/**********************************tabs-images*************************/
+.tabs-images{
+	color:#fff;
+}
+.tabs-images .info-window{
+	border-radius:10px;
+	margin: 30px auto;
+    min-height: 130px;
+    width: 240px;
+	box-shadow: 0 13px 20px -10px #000;
+	padding: 10px 15px;
+	font-weight:bold;
+}
+.tabs-images .info-window .text-uppercase{
+	margin-bottom: 20px;
+}
+.tabs-images .info-window .block-icon{
+	padding-left: 60px;
+	font-weight: normal;
+}
+.tabs-images .info-window .block-icon>div{
+	border-top: 1px solid rgba(128, 148, 164, 0.5);
+    font-size: 30px;
+    margin-top: 5px;
+}
+.tabs-images .left-col>.info-window{
+	background:radial-gradient(at top center, #7b8ea2, #566472);
+}
+.tabs-images .left-col>.info-window>.block-icon{
+	background: url("../images/icon-video.png") no-repeat scroll 0 5px;	
+}
+.tabs-images .mid-col>.info-window>.block-icon{
+	background: url("../images/icon-apps.png") no-repeat scroll 0 5px;	
+}
+.tabs-images .right-col>.info-window>.block-icon{
+	background: url("../images/icon-jobs.png") no-repeat scroll 0 5px;	
+}
+
+
+.tabs-images .mid-col>.info-window{
+	background:radial-gradient(at top center, #3bc8e1, #2898c6);
+}
+.tabs-images .right-col>.info-window{
+	background:radial-gradient(at top center, #dae8eb, #bdd4db);
+}
+ 
+/******************************Resolutions options******************/
 @media (min-width: 992px) and (max-width: 1200px){ 
 
 
