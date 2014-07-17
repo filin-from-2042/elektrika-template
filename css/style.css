@@ -162,6 +162,7 @@ header .dropdown-menu > li#arrow-sub {
 	display:inline-block;
 }
 .short-info  .buttons-full-info .btn-default{
+	background-color:#5e697b;
 	background-image: linear-gradient(to bottom, #5e697b 0px, #48505e 100%);
 	color:#fff;
 	border:none;
@@ -194,10 +195,12 @@ header .dropdown-menu > li#arrow-sub {
 	border-radius:10px;
 	margin: 30px auto;
     min-height: 130px;
-    width: 240px;
+    /* width: 240px; */
+    width: 100%;
 	box-shadow: 0 13px 20px -10px #000;
 	padding: 10px 15px;
 	font-weight:bold;
+	
 }
 .tabs-images .info-window .text-uppercase{
 	margin-bottom: 20px;
@@ -205,6 +208,8 @@ header .dropdown-menu > li#arrow-sub {
 .tabs-images .info-window .block-icon{
 	padding-left: 60px;
 	font-weight: normal;
+	margin: auto;
+    width: 205px;
 }
 .tabs-images .info-window .block-icon>div{
 	border-top: 1px solid rgba(128, 148, 164, 0.5);
@@ -231,7 +236,50 @@ header .dropdown-menu > li#arrow-sub {
 .tabs-images .right-col>.info-window{
 	background:radial-gradient(at top center, #dae8eb, #bdd4db);
 }
- 
+.tabs-images  #video-link,
+.tabs-images  #phone-link,
+.tabs-images  #jobs-link{
+	color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 14px;
+    text-decoration: none;
+	min-height:28px;
+    width: 100%
+}
+.tabs-images  #video-link{
+	background:url(../images/text-video.png) no-repeat 100% 0;
+}
+.tabs-images  #phone-link{
+	background:url(../images/text-apps.png) no-repeat 100% 0;
+}
+.tabs-images  #jobs-link{
+	background:url(../images/text-jobs.png) no-repeat 100% 0;
+}
+.tabs-images .btn .btn:hover{
+	 background-color: #48505e;
+}
+.tabs-images .btn .btn{
+	background-color:#5e697b;
+	background-image: linear-gradient(to bottom, #5e697b 0px, #48505e 100%);
+	color:#fff;
+	border:none;
+	border-top:1px solid #8290a8;
+	padding: 6px 15px 6px 20px;
+}
+.tabs-images .btn span{
+	padding: 0 35px 0 0px;
+}
+.tabs-images .btn .gototour{
+	background: url("../images/button-gototour.png") no-repeat 100% 0;
+}
+.tabs-images .btn .appstore{
+	background: url("../images/button-appstore.png") no-repeat 100% 0;
+}
+.tabs-images .btn .getajob{
+	background: url("../images/button-getajob.png") no-repeat 100% 0;
+}
 /******************************Resolutions options******************/
 @media (min-width: 992px) and (max-width: 1200px){ 
 
@@ -256,5 +304,10 @@ header .dropdown-menu > li#arrow-sub {
 	#logo{
 		float:none;
 	}
-
+	.tabs-images  #video-link,
+	.tabs-images  #phone-link,
+	.tabs-images  #jobs-link{
+		font-size:16px;
+	}
+	
 }
