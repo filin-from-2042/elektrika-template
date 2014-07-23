@@ -6,7 +6,8 @@
 }
 .short-info
 {
-	background:linear-gradient(to right, #16171a, #2d2f34 30%, #16171a 100%); 
+	/*background:linear-gradient(to right, #16171a, #2d2f34 30%, #16171a 100%); */
+	background:#16171a;
 }
 .tabs-images{
 	background:linear-gradient(to right, #2b3139, #475160 30%, #2b313a 100%); 	
@@ -17,8 +18,12 @@
 .prev-block{
 	background-color: #26282e;
 }
+
 footer {
 	background-color: #1a1b1e;
+}
+.mail-panel{
+    background:linear-gradient(to bottom, #141517, #16171a 50%, #18191c 100%);
 }
 
 /***************************header**************************************/
@@ -279,6 +284,50 @@ header .dropdown-menu > li#arrow-sub {
 }
 .tabs-images .btn .getajob{
 	background: url("../images/button-getajob.png") no-repeat 100% 0;
+}
+
+/***********************mail-panel***********************************/
+
+.mail-panel .panel{
+    margin: 30px 0;
+    background: linear-gradient(to top, #33363a, #41454a 50%, #464a50 100%);
+    border:none;
+    border-top: 1px solid #5e636b;
+    color: #fff;
+}
+.mail-panel .mail-icon{
+    height: 100%;
+    background: linear-gradient(to bottom, #88909c, #6c727a);
+}
+.mail-panel .panel-body p{
+    font-weight: bold;
+}
+.mail-panel .panel-body p > span{
+    margin-left: 10px;
+}
+.mail-panel .panel-body p > span:first-child{
+    text-transform: uppercase;
+}
+.mail-panel .form-group{
+    width:70%;
+}
+.mail-panel .form-control{
+    background-image: linear-gradient(to bottom, #1c1e21, #26292d);
+    border:none;
+    width:100%;
+}
+.mail-panel .form-inline > .btn-danger{
+    margin-left: 10px;
+}
+.mail-panel .btn-danger,
+.mail-panel .form-group{
+    float: right;
+}
+.mail-panel .panel-body{
+    padding: 0;
+}
+.mail-panel .panel-wrap{
+    padding:15px;
 }
 /******************************Resolutions options******************/
 @media (min-width: 992px) and (max-width: 1200px){ 
