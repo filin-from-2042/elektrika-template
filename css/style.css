@@ -1,12 +1,14 @@
 
 /***************************Main*****************************************/
+body{
+    min-width: 400px;
+}
 .slider
 {
 	background-color:#202227;
 }
 .short-info
 {
-	/*background:linear-gradient(to right, #16171a, #2d2f34 30%, #16171a 100%); */
 	background:#16171a;
 }
 .tabs-images{
@@ -19,8 +21,9 @@
 	background-color: #26282e;
 }
 
-footer {
-	background-color: #1a1b1e;
+.footer {
+    /*background:radial-gradient(at 50% 0% , #27272c, #18191c); */
+    background:linear-gradient(to right, #18191c, #18191c 50%, #222427 60%, #18191c 70%,#18191c 100%);
 }
 .mail-panel{
     background:linear-gradient(to bottom, #141517, #16171a 50%, #18191c 100%);
@@ -195,12 +198,13 @@ header .dropdown-menu > li#arrow-sub {
 /**********************************tabs-images*************************/
 .tabs-images{
 	color:#fff;
+    padding-bottom: 20px;
 }
 .tabs-images .info-window{
 	border-radius:10px;
 	margin: 30px auto;
     min-height: 130px;
-    /* width: 240px; */
+    min-width: 230px;
     width: 100%;
 	box-shadow: 0 13px 20px -10px #000;
 	padding: 10px 15px;
@@ -251,6 +255,7 @@ header .dropdown-menu > li#arrow-sub {
     margin-bottom: 14px;
     text-decoration: none;
 	min-height:28px;
+	min-width:230px;
     width: 100%
 }
 .tabs-images  #video-link{
@@ -296,11 +301,24 @@ header .dropdown-menu > li#arrow-sub {
     color: #fff;
 }
 .mail-panel .mail-icon{
-    height: 100%;
-    background: linear-gradient(to bottom, #88909c, #6c727a);
+    border-radius: 3px;
+}
+.mail-panel .content-panel{
+    border-radius: 0 3px 3px 0;
+}
+.mail-panel .mail-icon{
+    background: url("../images/icon-mail.png") no-repeat 18px 50%, linear-gradient(to bottom, #88909c, #6c727a) repeat ;
+    padding-left: 65px;
+}
+.mail-panel .content-panel{
+    background: linear-gradient(to top, #33363a, #41454a 50%, #464a50 100%);
+    width:100%;
+    padding:15px 0;
 }
 .mail-panel .panel-body p{
     font-weight: bold;
+    margin:0;
+    line-height: 34px;
 }
 .mail-panel .panel-body p > span{
     margin-left: 10px;
@@ -326,8 +344,52 @@ header .dropdown-menu > li#arrow-sub {
 .mail-panel .panel-body{
     padding: 0;
 }
-.mail-panel .panel-wrap{
-    padding:15px;
+.mail-panel .content-panel .col-md-7{
+    padding-right: 0;
+}
+
+/******************************Footer*********************/
+.footer .col-md-1{
+    width: 12.3333%;
+}
+.footer ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.footer ul a{
+    color:#9ea3b0;
+    font-size:12px;
+}
+.footer .title-menu{
+    color:#fff;
+}
+.footer .col-md-1:nth-child(1) {
+    padding-right:25px;
+}
+.footer .col-md-1:nth-child(n+2) {
+    padding: 0 25px;
+    border-left:1px solid #2e2e33;
+}
+.footer .row {
+    padding:25px 0 30px;
+}
+.footer .title-menu {
+    display: inline-block;
+    padding-bottom: 15px;
+}
+.footer .col-md-6 img{
+    float:left;
+    padding-top:30px;
+}
+.footer .title-copyright,
+.footer .copyright,
+.footer .bottom-links a{
+    color:#fff;
+}
+.footer .copy-text{
+    padding: 0;
+    text-align: justify;
 }
 /******************************Resolutions options******************/
 @media (min-width: 992px) and (max-width: 1200px){ 
@@ -339,7 +401,6 @@ header .dropdown-menu > li#arrow-sub {
 
 
 }
-
 
 
 @media (min-width: 768px) and (max-width: 991px){ 
@@ -358,5 +419,25 @@ header .dropdown-menu > li#arrow-sub {
 	.tabs-images  #jobs-link{
 		font-size:16px;
 	}
+    .mail-panel .form-group {
+        width: 85%;
+    }
+    .mail-panel .panel-body p{
+        display: block;
+        text-align:center;
+
+    }
 	
+}
+
+@media (max-width: 768px){
+    .mail-panel .form-group {
+        /*width: 85%;*/
+    }
+
+    .mail-panel .panel-body p > span:first-child{
+        display: block;
+        text-align:center;
+
+    }
 }
