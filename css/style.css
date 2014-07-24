@@ -41,7 +41,7 @@ header .navbar .container{
 	padding: 19px 10px;
 }
 header .nav.navbar-nav  li{
-	padding:5px 10px;
+	padding:5px 0px;
 }
 header .nav.navbar-nav ul.dropdown-menu {
 	background-color:#313338;
