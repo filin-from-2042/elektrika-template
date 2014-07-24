@@ -138,7 +138,7 @@ header .dropdown-menu > li#arrow-sub {
 	color:#6f7380;
  }
  
- .short-info  .tab-content>.tab-pane {
+ .short-info .row{
 	color:#7c8994;
  }
  .short-info  .tab-content>.tab-pane .col-md-4 {
@@ -168,13 +168,15 @@ header .dropdown-menu > li#arrow-sub {
 	border:none;
 	border-top:1px solid #5a8ec5;
 }
- .short-info  .buttons-full-info span{
+ .short-info  .buttons-full-info span,
+ .columns-preview .btn-default span{
     background-position: 100% 50%;
     background-repeat: no-repeat;
 	padding-right: 30px;
 	display:inline-block;
 }
-.short-info  .buttons-full-info .btn-default{
+.short-info  .buttons-full-info .btn-default,
+.columns-preview .btn-default{
 	background-color:#5e697b;
 	background-image: linear-gradient(to bottom, #5e697b 0px, #48505e 100%);
 	color:#fff;
@@ -183,11 +185,14 @@ header .dropdown-menu > li#arrow-sub {
 	/* border-color: #8290a8; */
 }
 .short-info  .buttons-full-info .btn-default:hover,
-.short-info  .buttons-full-info .btn-default:focus{
+.short-info  .buttons-full-info .btn-default:focus,
+.columns-preview .btn-default:hover,
+.columns-preview .btn-default:focus{
 	background-color:#48505e;
 }
 
-.short-info  .buttons-full-info .more{
+.short-info  .buttons-full-info .more,
+.columns-preview .btn-default .more{
     background-image: url("../images/button-read-more.png");
 }
 .short-info  .buttons-full-info .follow{
@@ -284,7 +289,7 @@ header .dropdown-menu > li#arrow-sub {
 	padding: 6px 15px 6px 20px;
 }
 .tabs-images .btn span{
-	padding: 0 35px 0 0px;
+	padding: 0 35px 0 0;
 }
 .tabs-images .btn .gototour{
 	background: url("../images/button-gototour.png") no-repeat 100% 0;
@@ -423,7 +428,7 @@ header .dropdown-menu > li#arrow-sub {
     border: none;
 }
 .top-title-panel .panel .title{
-    padding:14px 0px;
+    padding:14px 0;
 }
 .top-title-panel .panel.panel-default{
     background:linear-gradient(to bottom, #ced2d8, #c9cdd4 50%, #bbc0c8 100%);
@@ -446,6 +451,7 @@ header .dropdown-menu > li#arrow-sub {
 /******************************Columns-preview**********************/
 .columns-preview{
     padding:40px 0;
+    color:#7c8994;
 }
 .columns-preview .panel{
     background: linear-gradient(to top, #33363a, #41454a 50%, #464a50 100%);
@@ -462,12 +468,57 @@ header .dropdown-menu > li#arrow-sub {
     letter-spacing: 1px;
     text-align: center;
     margin:0;
+    font-weight: bold;
+}
+.columns-preview #people,
+.columns-preview #professionals,
+.columns-preview #quality{
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 14px;
+    min-height: 28px;
+    min-width: 230px;
+    text-decoration: none;
+    width: 100%;
+}
+.columns-preview #people{
+    background: url("../images/icon-people.png") no-repeat 100% 0 ;
+}
+.columns-preview #professionals{
+    background: url("../images/icon-professionals.png") no-repeat 100% 0 ;
+}
+.columns-preview #quality{
+    background: url("../images/icon-quality.png") no-repeat 100% 0;
+}
+.columns-preview .columns>div:nth-child(1){
+    padding-right:40px;
+    padding-left:0;
+}
+
+.columns-preview .columns>div:nth-child(n+2){
+    border-left:8px dotted #292c33;
+    padding:0 40px;
+}
+.columns-preview .columns>div:nth-child(3){
+    padding-right:0;
+    padding-left:40px;
+}
+.columns-preview .columns p{
+    text-align: justify;
 }
 /******************************Resolutions options******************/
 
 @media (min-width: 1200px){
     .footer .col-lg-1{
         width: 12.3333%;
+    }
+    .short-info .row .img-responsive{
+        display: inline;
+    }
+    .short-info .row .col-md-4{
+        text-align: right;
     }
 }
 
@@ -481,7 +532,7 @@ header .dropdown-menu > li#arrow-sub {
         width: 12.3333%;
     }
     header .nav.navbar-nav  li{
-        padding:5px 0px;
+        padding:5px 0;
     }
 }
 
@@ -513,6 +564,25 @@ header .dropdown-menu > li#arrow-sub {
     .footer .copy-text{
         margin-top: 20px;
     }
+
+    .columns-preview .columns>div:nth-child(1){
+        padding-right:40px;
+        padding-left:0;
+    }
+
+    .columns-preview .columns>div:nth-child(n+2){
+        border-left:8px dotted #292c33;
+        padding:0 40px;
+    }
+    .columns-preview .columns>div:nth-child(3){
+        padding-right:0;
+        padding-left:40px;
+    }
+    .columns-preview #people,
+    .columns-preview #professionals,
+    .columns-preview #quality{
+        min-width:0;
+    }
 	
 }
 
@@ -535,5 +605,9 @@ header .dropdown-menu > li#arrow-sub {
     .top-title-panel .panel .title{
         /*display:block;*/
         text-align: center;
+    }
+    .columns-preview >.container .columns>div{
+        padding: 0 15px;
+        border:none;
     }
 }
