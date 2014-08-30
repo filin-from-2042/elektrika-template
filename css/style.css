@@ -1196,22 +1196,11 @@ div.form-contact-container{
     .contact-info.social-buttons .btn{
         padding: 5px 8px 5px 9px;
     }
-    .form-contact .inline-inputs input{
+    .form-contact .inline-inputs input,
+    .form-contact .block-inputs  textarea,
+    .form-contact .block-inputs  input{
         display: inline-block;
         width: 95%;
-    }
-    .form-contact .block-inputs  textarea,
-    .form-contact .block-inputs  input{
-        display: inline-block;
-        width: 98%;
-    }.form-contact .inline-inputs input{
-         display: inline-block;
-         width: 90%;
-     }
-    .form-contact .block-inputs  textarea,
-    .form-contact .block-inputs  input{
-        display: inline-block;
-        width: 90%;
     }
 }
 /************* COL-XS- ***************************************/
@@ -1267,5 +1256,24 @@ div.form-contact-container{
     }
     .blog-columns .repost-panel{
         text-align: center;
+    }
+    .form-contact .inline-inputs input,
+    .form-contact .block-inputs  textarea,
+    .form-contact .block-inputs  input{
+        display: inline-block;
+        width: 95%;
+    }
+    .blocks-column .contact-info-container{
+        display: block;
+    }
+    .contact-info.social-buttons a{
+        width: 40%;
+    }
+    .contact-info.social-buttons a>.btn-info,
+    .contact-info.social-buttons a>.btn-primary{
+        width: 100%;
+    }
+    .contact-content .main-column{
+        padding-left: 20px;
     }
 }
