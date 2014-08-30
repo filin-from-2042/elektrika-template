@@ -10,7 +10,8 @@ body{
 .short-info,
 .top-title-panel,
 .columns-preview,
-.blog-columns{
+.blog-columns,
+.contact-content{
 	background:#16171a;
 }
 .tabs-images{
@@ -152,21 +153,25 @@ header .dropdown-menu > li#arrow-sub {
  .short-info  .buttons-full-info{
 	margin-top:20px;
  }
- .short-info  .buttons-full-info .btn {
+ .short-info  .buttons-full-info .btn,
+ .contact-info.social-buttons .btn{
 	padding: 5px 10px 5px 20px;
  }
   .short-info  .buttons-full-info a,
-  .blog-columns .main-column .post-preview a  {
+  .blog-columns .main-column .post-preview a,
+  .contact-info.social-buttons a {
 	display:inline-block;
   }
   .short-info  .buttons-full-info .col-md-6 a:nth-child(n+2) {
     margin-left: 20px;
 }
-.short-info  .buttons-full-info a>.btn-info{
+.short-info  .buttons-full-info a>.btn-info,
+.contact-info.social-buttons a>.btn-info{
 	border:none;
 	border-top:1px solid #59bdd0;
 }
-.short-info  .buttons-full-info a>.btn-primary{
+.short-info  .buttons-full-info a>.btn-primary,
+.contact-info.social-buttons a>.btn-primary{
 	border:none;
 	border-top:1px solid #5a8ec5;
 }
@@ -174,7 +179,8 @@ header .dropdown-menu > li#arrow-sub {
  .columns-preview .btn-default span,
  .blog-columns .main-column .post-preview .btn-default  span.more,
  .blog-columns .main-column .post-preview .btn-default  span.share,
- .blog-columns .main-column .comment-panel .add-comment span.add{
+ .blog-columns .main-column .comment-panel .add-comment span.add,
+ .contact-info.social-buttons span{
     background-position: 100% 50%;
     background-repeat: no-repeat;
 	padding-right: 30px;
@@ -207,13 +213,15 @@ header .dropdown-menu > li#arrow-sub {
 .blog-columns .main-column .comment-panel .add-comment .add{
     background-image: url("../images/button-read-more.png");
 }
-.short-info  .buttons-full-info .follow{
+.short-info  .buttons-full-info .follow,
+.contact-info.social-buttons .follow{
     background-image: url("../images/button-twitter.png");
 }
 .short-info  .buttons-full-info .get{
     background-image: url("../images/button-get.png");
 } 
-.short-info  .buttons-full-info .facebook{
+.short-info  .buttons-full-info .facebook,
+.contact-info.social-buttons .facebook{
     background-image: url("../images/button-facebook.png");
 } 
  
@@ -869,7 +877,9 @@ header .dropdown-menu > li#arrow-sub {
     width: 130px;
 }
 .blog-columns .main-column .comment-panel .title,
-.blog-columns .add-comment-container .add-comment.title{
+.blog-columns .add-comment-container .add-comment.title,
+.short-text.title,
+.form-contact.title{
     display: block;
     color: #fff;
     font-size: 16px;
@@ -947,7 +957,9 @@ header .dropdown-menu > li#arrow-sub {
     width: 95%;
 }
 .blog-columns form.add-comment-form .left-group input,
-.blog-columns form.add-comment-form .right-group textarea{
+.blog-columns form.add-comment-form .right-group textarea,
+.form-contact input,
+.form-contact textarea{
     border:none;
     border-bottom: 1px solid #34383d;
     border-right: 1px solid #34383d;
@@ -963,19 +975,118 @@ header .dropdown-menu > li#arrow-sub {
     font-size: 17px;
     vertical-align: top;
 }
-.blog-columns form.add-comment-form .btn-danger{
+.blog-columns form.add-comment-form .btn-danger,
+form.form-contact .btn-danger{
     background: linear-gradient(to bottom, #bf5d44 0%, #c3493c 50%, #c83333 100%);
     padding: 6px 16px;
     border: none;
     border-top:1px solid #dd8a64;
     border-left:1px solid #dd8a64;
 }
+.blog-columns form.add-comment-form .btn-danger:hover,
+form.form-contact .btn-danger:hover{
+    background: linear-gradient(to bottom, #c3493c 0%, #c3493c 50%, #c83333 100%);
+}
 .blog-columns form.add-comment-form div.row > div{
     padding: 0;
  }
-.blog-columns form.add-comment-form .btn-container{
+.blog-columns form.add-comment-form .btn-container,
+form.form-contact .btn-container{
     margin-top: 10px;
  }
+/********************************************** CONTACT ***************************************************************/
+.contact-content .main-column{
+    padding-left: 0;
+}
+.main-column > .short-text{
+    border-bottom: 1px solid #121215;
+}
+.short-text.subtitle,
+.form-contact.subtitle{
+    color:#b2c1ce;
+}
+.short-text.title,
+.form-contact.title{
+    text-transform: uppercase;
+}
+.short-text > p{
+    color: #67747f;
+    margin: 35px 0;
+}
+form.form-contact{
+    margin: 20px 0;
+}
+div.form-contact-container{
+    padding: 20px 0px 20px;
+    border-top:1px solid #1f2024;
+}
+.form-contact span.required{
+    color: #9fb1c2;
+    font-size: 17px;
+    vertical-align: top;
+    margin-left: 5px;
+}
+.form-contact input{
+    margin-bottom: 25px;
+}
+.form-contact .inline-inputs input{
+    display: inline-block;
+    width: 95%;
+}
+.form-contact .block-inputs  textarea,
+.form-contact .block-inputs  input{
+    display: inline-block;
+    width: 98%;
+}
+.contact-content .blocks-column{
+    text-align: center;
+}
+.map-container .map-wrap{
+    display: inline-block;
+}
+.blocks-column .contact-info-container{
+    margin:10px 0;
+    border-radius: 10px;
+    background-color: #34373b;
+    color: #fff;
+    text-align: left;
+    display: inline-block;
+}
+.contact-info.title{
+    border-radius: 10px 10px 0 0;
+    background: linear-gradient(to bottom, #3a3d40 0%, #333539 50%, #2b2d31 100%);
+    padding: 10px 20px;
+    color:#c6c6c6;
+    text-transform: uppercase;
+    border-top:1px solid #54585c;
+}
+.contact-info-container > div:nth-child(2n+3){
+    background:linear-gradient(to bottom, #54575b 0%, #4f5155 50%, #494c4f 100%);
+    border-bottom:1px solid #383b3f;
+}
+.contact-info-container > div.social-buttons:last-child{
+    padding: 10px;
+    text-align: center;
+}
+.contact-info-container > div:nth-child(n+2){
+    padding: 20px 20px;
+}
+.contact-info-container span.email-title,
+.contact-info-container span.office-title,
+.contact-info-container span.phone-title,
+.contact-info-container span.fax-title{
+    position: absolute;
+}
+.contact-info-container span.email-text,
+.contact-info-container span.office-text,
+.contact-info-container span.phone-text,
+.contact-info-container span.fax-text{
+    color: #d4d4d4;
+    margin-left: 70px;
+}
+.social-buttons > a:last-child{
+    padding-left: 10px;
+}
 /******************************Resolutions options******************/
 /************* COL-LG- ***************************************/
 @media (min-width: 1200px){
@@ -1082,7 +1193,26 @@ header .dropdown-menu > li#arrow-sub {
     .blog-columns .repost-panel a.repost-icon{
         padding-right: 8px;
     }
-	
+    .contact-info.social-buttons .btn{
+        padding: 5px 8px 5px 9px;
+    }
+    .form-contact .inline-inputs input{
+        display: inline-block;
+        width: 95%;
+    }
+    .form-contact .block-inputs  textarea,
+    .form-contact .block-inputs  input{
+        display: inline-block;
+        width: 98%;
+    }.form-contact .inline-inputs input{
+         display: inline-block;
+         width: 90%;
+     }
+    .form-contact .block-inputs  textarea,
+    .form-contact .block-inputs  input{
+        display: inline-block;
+        width: 90%;
+    }
 }
 /************* COL-XS- ***************************************/
 @media (max-width: 768px){
