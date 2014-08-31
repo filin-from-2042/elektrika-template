@@ -11,7 +11,8 @@ body{
 .top-title-panel,
 .columns-preview,
 .blog-columns,
-.contact-content{
+.contact-content,
+.services-description{
 	background:#16171a;
 }
 .tabs-images{
@@ -153,13 +154,17 @@ header .dropdown-menu > li#arrow-sub {
  .short-info  .buttons-full-info{
 	margin-top:20px;
  }
+ /************ padding for button ***************/
  .short-info  .buttons-full-info .btn,
- .contact-info.social-buttons .btn{
+ .contact-info.social-buttons .btn,
+ .single-service .buttons-container .btn-default{
 	padding: 5px 10px 5px 20px;
  }
+ /**** wrapper-link  button ***************/
   .short-info  .buttons-full-info a,
   .blog-columns .main-column .post-preview a,
-  .contact-info.social-buttons a {
+  .contact-info.social-buttons a,
+  .single-service .buttons-container a{
 	display:inline-block;
   }
   .short-info  .buttons-full-info .col-md-6 a:nth-child(n+2) {
@@ -175,27 +180,55 @@ header .dropdown-menu > li#arrow-sub {
 	border:none;
 	border-top:1px solid #5a8ec5;
 }
+/*********** span into button *****************/
  .short-info  .buttons-full-info span,
  .columns-preview .btn-default span,
  .blog-columns .main-column .post-preview .btn-default  span.more,
  .blog-columns .main-column .post-preview .btn-default  span.share,
  .blog-columns .main-column .comment-panel .add-comment span.add,
- .contact-info.social-buttons span{
+ .contact-info.social-buttons span,
+ .single-service .buttons-container .btn-default span{
     background-position: 100% 50%;
     background-repeat: no-repeat;
 	padding-right: 30px;
 	display:inline-block;
 }
+ /************ grey button (readmore, add-comment) *****************/
 .short-info  .buttons-full-info .btn-default,
 .columns-preview .btn-default,
 .blog-columns .main-column .post-preview .btn-default.readmore,
-.blog-columns .main-column .comment-panel .btn-default.add-comment{
+.blog-columns .main-column .comment-panel .btn-default.add-comment,
+.single-service .buttons-container .btn-default.readmore,
+.single-service .buttons-container .btn-default.get{
 	background-color:#5e697b;
 	background-image: linear-gradient(to bottom, #5e697b 0%, #48505e 100%);
 	color:#fff;
 	border:none;
 	border-top:1px solid #8290a8;
 }
+/************** green button ***************************************/
+.single-service .buttons-container .btn-default.get-support{
+    background-color:#617c8c;
+    background-image: linear-gradient(to bottom, #82a7b3 0%, #617c8c 100%);
+    color:#fff;
+    border:none;
+    border-top:1px solid #aac4cb;
+}
+.single-service .buttons-container span.get-support{
+    padding-right: 35px;
+}
+/**************** orange button ***********************************/
+.single-service .buttons-container .btn-default.examples{
+    background-color:#8d3a28;
+    background-image: linear-gradient(to bottom, #b04d35 0%, #8d3a28 100%);
+    color:#fff;
+    border:none;
+    border-top:1px solid #cd6a49;
+}
+.single-service .buttons-container span.examples{
+    padding-right: 40px;
+}
+/**************** hover for grey button ****************************/
 .short-info  .buttons-full-info .btn-default:hover,
 .short-info  .buttons-full-info .btn-default:focus,
 .blog-columns .main-column .post-preview .btn-default.readmore:hover,
@@ -203,21 +236,33 @@ header .dropdown-menu > li#arrow-sub {
 .blog-columns .main-column .comment-panel .add-comment:hover,
 .blog-columns .main-column .comment-panel .add-comment:focus,
 .columns-preview .btn-default:hover,
-.columns-preview .btn-default:focus{
+.columns-preview .btn-default:focus,
+.single-service .buttons-container .btn-default.readmore:hover,
+.single-service .buttons-container .btn-default.readmore:focus,
+.single-service .buttons-container .btn-default.get:hover,
+.single-service .buttons-container .btn-default.get:focus{
 	background-color:#48505e;
 }
-
+/**************** images for buttons ***************************/
 .short-info  .buttons-full-info .more,
 .columns-preview .btn-default .more,
 .blog-columns .main-column .post-preview .btn-default.readmore .more,
-.blog-columns .main-column .comment-panel .add-comment .add{
+.blog-columns .main-column .comment-panel .add-comment .add,
+.single-service .buttons-container .btn-default.readmore .more{
     background-image: url("../images/button-read-more.png");
+}
+.single-service .buttons-container .btn-default .get-support{
+    background-image: url("../images/icon-get-support.png");
+}
+.single-service .buttons-container .btn-default .examples{
+    background-image: url("../images/icon-examples.png");
 }
 .short-info  .buttons-full-info .follow,
 .contact-info.social-buttons .follow{
     background-image: url("../images/button-twitter.png");
 }
-.short-info  .buttons-full-info .get{
+.short-info  .buttons-full-info .get,
+.single-service .buttons-container .btn-default .get{
     background-image: url("../images/button-get.png");
 } 
 .short-info  .buttons-full-info .facebook,
@@ -879,7 +924,8 @@ header .dropdown-menu > li#arrow-sub {
 .blog-columns .main-column .comment-panel .title,
 .blog-columns .add-comment-container .add-comment.title,
 .short-text.title,
-.form-contact.title{
+.form-contact.title,
+.short-service-description .title{
     display: block;
     color: #fff;
     font-size: 16px;
@@ -887,7 +933,8 @@ header .dropdown-menu > li#arrow-sub {
 }
 .blog-columns .main-column .comment-panel .title,
 .blog-columns .main-column .comment-panel .subtitle,
-.blog-columns .add-comment-container .add-comment.subtitle{
+.blog-columns .add-comment-container .add-comment.subtitle,
+.short-service-description .subtitle{
     text-shadow: -1px 1px 1px #000;
 }
 .blog-columns .comments-container{
@@ -1087,6 +1134,39 @@ div.form-contact-container{
 .social-buttons > a:last-child{
     padding-left: 10px;
 }
+/******************************************* SERVICE DESCRIPTION *******************************************************/
+.single-service .container{
+    border-bottom:1px solid #121215;
+    padding: 30px 0;
+}
+.single-service:nth-child(3) > .container{
+    border:none;
+}
+.single-service:nth-child(n+2) .container{
+    border-top:1px solid #1f2024;
+}
+.single-service{
+    color: #67747f;
+}
+.single-service p.entrance-text{
+    font-weight: bold;
+}
+.single-service .buttons-container{
+    padding-top: 30px;
+}
+.buttons-container > div:first-child a:nth-child(n+2){
+    margin-left: 20px;
+}
+.short-service-description .title{
+    margin-top: 5px;
+}
+.short-service-description .subtitle{
+    color: #7c8994;
+}
+.short-service-description .text{
+    color:#5f6b75;
+    margin: 10px 0;
+}
 /******************************Resolutions options******************/
 /************* COL-LG- ***************************************/
 @media (min-width: 1200px){
@@ -1202,6 +1282,9 @@ div.form-contact-container{
         display: inline-block;
         width: 95%;
     }
+    .single-service .row:first-child > div:first-child{
+        text-align: center;
+    }
 }
 /************* COL-XS- ***************************************/
 @media (max-width: 768px){
@@ -1276,4 +1359,22 @@ div.form-contact-container{
     .contact-content .main-column{
         padding-left: 20px;
     }
+    .single-service .container{
+        padding: 30px 10px;
+    }
+    .single-service .buttons-container{
+        padding-top: 10px;
+    }
+    .single-service .row:first-child > div:first-child{
+        text-align: center;
+    }
+    .short-service-description .title,
+    .short-service-description .subtitle{
+        display: block;
+        text-align: center;
+    }
+    .single-service .container {
+         border-bottom: 1px solid #121215;
+         /*padding: 30px 0;*/
+     }
 }
